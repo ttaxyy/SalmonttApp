@@ -19,11 +19,13 @@ public class GestorUnidades {
         CentroCultivo centro2 = new CentroCultivo("Arcoíris", "Valparaíso", 1301);
         PlantaProceso planta1 = new PlantaProceso("Zafiro", "Providencia", 2000);
         PlantaProceso planta2 = new PlantaProceso("Esmeralda", "Viña del Mar", 2500);
+        CentroCultivo centro3 = new CentroCultivo("Tortuga Marina", "Valparaíso", 1522);
 
         unidades.add(centro1);
         unidades.add(centro2);
         unidades.add(planta1);
         unidades.add(planta2);
+        unidades.add(centro3);
 
         return unidades;
     }
