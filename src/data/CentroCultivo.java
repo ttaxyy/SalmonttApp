@@ -1,10 +1,12 @@
 package data;
 
+import model.Registrable;
+
 /*
 * Subclase de UnidadOperativa.
 * Representa a los centros de cultivo con el atributo de toneladas producidas.
 * */
-public class CentroCultivo extends UnidadOperativa {
+public class CentroCultivo extends UnidadOperativa implements Registrable {
     private int toneladasProduccion;
 
     public CentroCultivo(String nombre, String comuna, int toneladasProduccion) {
@@ -15,8 +17,7 @@ public class CentroCultivo extends UnidadOperativa {
     public int getToneladasProduccion() {return toneladasProduccion;}
     public void setToneladasProduccion(int toneladasProduccion) {this.toneladasProduccion = toneladasProduccion;}
 
-    @Override
-    public void mostrarInformacion() {
+    public void mostrarResumen() {
         System.out.println("El centro de cultivo '" + nombre + "', ubicado en " + comuna + ", produjo " + toneladasProduccion + " toneladas." );
     }
 

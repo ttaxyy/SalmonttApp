@@ -1,10 +1,12 @@
 package data;
 
+import model.Registrable;
+
 /*
 * Subclase de UnidadOperativa.
 * Representa las plantas de procesamiento, e incluye su capacidad máxima de procesamiento en toneladas.
 * */
-public class PlantaProceso extends UnidadOperativa {
+public class PlantaProceso extends UnidadOperativa implements Registrable {
     private int capacidadProceso;
 
     public PlantaProceso(String nombre, String comuna, int capacidadProceso) {
@@ -16,7 +18,7 @@ public class PlantaProceso extends UnidadOperativa {
     public void setCapacidadProceso(int capacidadProceso) {this.capacidadProceso = capacidadProceso;}
 
     @Override
-    public void mostrarInformacion() {
+    public void mostrarResumen() {
         System.out.println("La Planta '" + nombre + "', ubicada en " + comuna + ", tiene una capacidad de proceso de " + capacidadProceso + " toneladas.");
     }
 
