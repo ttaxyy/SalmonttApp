@@ -1,10 +1,8 @@
 package model;
 import data.CentroCultivo;
 import data.PlantaProceso;
-import data.UnidadOperativa;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /*
 * Clase que se encarga de crear objetos de las distintas subclases, y las añade a un ArrayList.
@@ -12,8 +10,8 @@ import java.util.List;
 * */
 
 public class GestorUnidades {
-    public static List<UnidadOperativa> creacionUnidades() {
-        List<UnidadOperativa> unidades = new ArrayList<>();
+    public static ArrayList<Registrable> creacionUnidades() {
+        ArrayList<Registrable> unidades = new ArrayList<>();
 
         CentroCultivo centro1 = new CentroCultivo("Las Gaviotas", "Ñuñoa", 1280);
         CentroCultivo centro2 = new CentroCultivo("Arcoíris", "Valparaíso", 1301);
