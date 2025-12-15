@@ -18,7 +18,7 @@ public class CentroCultivo extends UnidadOperativa implements Registrable {
     public void setToneladasProduccion(int toneladasProduccion) {this.toneladasProduccion = toneladasProduccion;}
 
     public void mostrarResumen() {
-        System.out.println("Nombre: " + nombre + ", Comuna: " + comuna + ", Toneladas producidas: " + toneladasProduccion);
+        System.out.println("El centro de cultivo '" + nombre + "', ubicado en " + comuna + ", produjo " + toneladasProduccion + " toneladas." );
     }
 
     @Override

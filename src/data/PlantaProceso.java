@@ -19,7 +19,7 @@ public class PlantaProceso extends UnidadOperativa implements Registrable {
 
     @Override
     public void mostrarResumen() {
-        System.out.println("Nombre: " + nombre + ", Comuna: " + comuna + ", Capacidad de Procesamiento: " + capacidadProceso);
+        System.out.println("La Planta '" + nombre + "', ubicada en " + comuna + ", tiene una capacidad de proceso de " + capacidadProceso + " toneladas.");
     }
 
     @Override

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 * */
 
 public class GestorUnidades {
-    public static ArrayList<Registrable> creacionUnidades() {
+    public static void creacionUnidades() {
         ArrayList<Registrable> unidades = new ArrayList<>();
 
         CentroCultivo centro1 = new CentroCultivo("Las Gaviotas", "Ñuñoa", 1280);
@@ -25,6 +25,14 @@ public class GestorUnidades {
         unidades.add(planta2);
         unidades.add(centro3);
 
-        return unidades;
+        for (Registrable r : unidades) {
+            if (r instanceof PlantaProceso) {
+                System.out.println("Planta de proceso detectada:");
+            } else if (r instanceof CentroCultivo) {
+                System.out.println("Centro de cultivo detectado:");
+            }
+
+            r.mostrarResumen();
+        }
     }
 }
