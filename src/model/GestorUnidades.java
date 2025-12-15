@@ -32,7 +32,7 @@ public class GestorUnidades {
                 System.out.println("Centro de cultivo detectado:");
             }
 
-            r.mostrarResumen();
+            System.out.println(r);
         }
     }
 }

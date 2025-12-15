@@ -26,15 +26,15 @@ public class Formulario {
     }
 
     public static void crearPlanta() {
-        JPanel myPanel = new JPanel();
-        myPanel.add(new JLabel("Nombre:"));
-        myPanel.add(nom);
-        myPanel.add(new JLabel("Comuna:"));
-        myPanel.add(com);
-        myPanel.add(new JLabel("Capacidad de Procesamiento:"));
-        myPanel.add(cap);
+        JPanel panel = new JPanel();
+        panel.add(new JLabel("Nombre:"));
+        panel.add(nom);
+        panel.add(new JLabel("Comuna:"));
+        panel.add(com);
+        panel.add(new JLabel("Capacidad de Procesamiento:"));
+        panel.add(cap);
 
-        int result = JOptionPane.showConfirmDialog(null, myPanel,
+        int result = JOptionPane.showConfirmDialog(null, panel,
                 "Creación de planta de procesamiento", JOptionPane.OK_CANCEL_OPTION);
 
         if (result == JOptionPane.OK_OPTION) { //Si se hace click en OK:
@@ -45,8 +45,11 @@ public class Formulario {
             try {
                 int capacidadInt = Integer.parseInt(capacidadStr); //Intenta convertir el string del input en int
                 PlantaProceso planta = new PlantaProceso(nombre, comuna, capacidadInt); //Crea una nueva planta
+                String mensaje = planta.mostrarResumen();
                 JOptionPane.showMessageDialog(null,
                         "Se ha creado una nueva planta de procesamiento.", "Éxito", JOptionPane.INFORMATION_MESSAGE); //Muestra mensaje de éxito
+                JOptionPane.showMessageDialog(null,
+                        mensaje, "Información", JOptionPane.INFORMATION_MESSAGE);
             } catch (Exception e) { //Muestra un mensaje de error
                 JOptionPane.showMessageDialog(null, "Ocurrió un error.", "Error", JOptionPane.ERROR_MESSAGE);
             }
@@ -54,15 +57,15 @@ public class Formulario {
     }
 
     public static void crearCentro() {
-        JPanel myPanel = new JPanel();
-        myPanel.add(new JLabel("Nombre:"));
-        myPanel.add(nom);
-        myPanel.add(new JLabel("Comuna:"));
-        myPanel.add(com);
-        myPanel.add(new JLabel("Toneladas de producción:"));
-        myPanel.add(ton);
+        JPanel panel = new JPanel();
+        panel.add(new JLabel("Nombre:"));
+        panel.add(nom);
+        panel.add(new JLabel("Comuna:"));
+        panel.add(com);
+        panel.add(new JLabel("Toneladas de producción:"));
+        panel.add(ton);
 
-        int result = JOptionPane.showConfirmDialog(null, myPanel,
+        int result = JOptionPane.showConfirmDialog(null, panel,
                 "Creación de centro de cultivo", JOptionPane.OK_CANCEL_OPTION);
 
         if (result == JOptionPane.OK_OPTION) {
@@ -73,8 +76,11 @@ public class Formulario {
             try {
                 int toneladaInt = Integer.parseInt(tonStr);
                 CentroCultivo centro = new CentroCultivo(nombre, comuna, toneladaInt);
+                String mensaje = centro.mostrarResumen();
                 JOptionPane.showMessageDialog(null,
                         "Se ha creado un nuevo centro de cultivo.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null,
+                        mensaje, "Información", JOptionPane.INFORMATION_MESSAGE);
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Ocurrió un error.", "Error", JOptionPane.ERROR_MESSAGE);
             }

@@ -18,8 +18,8 @@ public class PlantaProceso extends UnidadOperativa implements Registrable {
     public void setCapacidadProceso(int capacidadProceso) {this.capacidadProceso = capacidadProceso;}
 
     @Override
-    public void mostrarResumen() {
-        System.out.println("La Planta '" + nombre + "', ubicada en " + comuna + ", tiene una capacidad de proceso de " + capacidadProceso + " toneladas.");
+    public String mostrarResumen() {
+        return ("La Planta '" + nombre + "', ubicada en " + comuna + ", tiene una capacidad de proceso de " + capacidadProceso + " toneladas.");
     }
 
     @Override
