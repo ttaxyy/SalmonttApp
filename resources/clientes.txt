@@ -1,0 +1,3 @@
+Juan Pérez;11250952-2;Valparaíso;Reñaca;Jardín del Mar;13;6
+Pedro Castillo;20123456-7;Santiago;Ñuñoa;Calle Feliz;1902;2
+Ana María Gonzáles;19444123-5;Santiago;Santiago Centro;Universidad de Chile;188;10

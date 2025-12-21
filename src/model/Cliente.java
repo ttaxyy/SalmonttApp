@@ -1,11 +1,11 @@
-package data;
+package model;
 
-import model.Registrable;
+import interfaces.Registrable;
 
 public class Cliente extends Persona implements Registrable {
     private int compras; //Número de compras que ha hecho
 
-    public Cliente(String nombre, String rut, Direccion direccion, int compras) {
+    public Cliente(String nombre, Rut rut, Direccion direccion, int compras) {
         super(nombre, rut, direccion);
         this.compras = compras;
     }

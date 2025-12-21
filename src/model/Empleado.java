@@ -1,11 +1,11 @@
-package data;
+package model;
 
-import model.Registrable;
+import interfaces.Registrable;
 
 public class Empleado extends Persona implements Registrable {
     private String lugarTrabajo;
 
-    public Empleado(String nombre, String rut, Direccion direccion, String lugarTrabajo) {
+    public Empleado(String nombre, Rut rut, Direccion direccion, String lugarTrabajo) {
         super(nombre, rut, direccion);
         this.lugarTrabajo = lugarTrabajo;
     }
@@ -20,7 +20,7 @@ public class Empleado extends Persona implements Registrable {
 
     @Override
     public void mostrarDatos() {
-        System.out.println("Nombre: " + nombre + ", RUT: " + rut + ", Dirección: " + direccion + ", Trabaja en: " + lugarTrabajo);
+        System.out.println("Nombre: " + nombre + ", RUT: " + rut + ", Dirección: " + direccion + ", Trabaja en: " + lugarTrabajo + ".");
     }
 
     @Override
